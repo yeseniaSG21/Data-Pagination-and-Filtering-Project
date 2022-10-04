@@ -1,3 +1,3 @@
-# Techdegree Project 2 - Data Pagination and Filtering Project
+# Data-Pagination-and-Filtering-Project
 
-Using JavaScript to display several “pages” of student data that the user can easily navigate and view. This makes navigating larges amount of data into smaller portions
+With the usage of JavaScript, I created a way to paginate through a pages/displays of student data. This makes navigating large amount of students data easier and give the user pagination buttons to click through the displays in groups of 
