@@ -36,13 +36,17 @@ function showPage (list, page) {
 *This function will create and insert/append the elements needed for the pagination buttons
   * @param {string} list - the array of student data from data.js
 **/
-//function addPagination (list) {
-  // create a variable to calculate the number of pages needed
+function addPagination (list) {
+  const numOfPages = Math.ceil(list.length/9);
+  const linkList = document.querySelector('.link-list');
+  linkList.innerHTML = '';
 
-    // select the element with a class of `link-list` and assign it to a variable
-
-    // set the innerHTML property of the variable you just created to an empty string
-
+  for ( let i = 1; i <= numOfPages.length; i++) {
+    let button =
+      `<li>
+        <button type="button">${[i]}</button>
+       </li>`    
+  }
     // loop over the number of pages needed
       // create the elements needed to display the pagination button
       // insert the above elements
@@ -54,7 +58,8 @@ function showPage (list, page) {
         // remove the "active" class from the previous button
         // add the active class to the clicked button
         // call the showPage function passing the `list` parameter and page to display as arguments
-//}
+}
 
 // Call functions
 showPage(data, 1);
+addPagination(data);
