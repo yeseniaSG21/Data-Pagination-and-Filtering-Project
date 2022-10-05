@@ -23,7 +23,6 @@ function showPage (list, page) {
 }
 showPage(data, 1);
 
-
 /*
 Create the `addPagination` function
 This function will create and insert/append the elements needed for the pagination buttons
