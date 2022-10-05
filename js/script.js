@@ -5,15 +5,14 @@ FSJS Project 2 - Data Pagination and Filtering
 
 /**
 * This function will create and insert/append the elements needed to display a "page" of nine students
-  * @param {sting} list - the array of student data from data.js
+  * @param {string} list - the array of student data from data.js
   * @param {number} page - the page number we want to display
 **/
 function showPage (list, page) {
-  // create two variables which will represent the index for the first and last student on the page
-
-    // select the element with a class of `student-list` and assign it to a variable
-
-    // set the innerHTML property of the variable you just created to an empty string
+  const startIndex = (page * 9) - 9;
+  const endIndex = page * 9;
+  const studentList = document.querySelector('.student-list');
+  studentList.innerHTML = '';
 
     // loop over the length of the `list` parameter
       // inside the loop create a conditional to display the proper students
@@ -23,11 +22,13 @@ function showPage (list, page) {
 }
 showPage(data, 1);
 
-/*
-Create the `addPagination` function
-This function will create and insert/append the elements needed for the pagination buttons
-*/
+/**
+*This function will create and insert/append the elements needed for the pagination buttons
+  * @param {string} list - the array of student data from data.js
+**/
+function addPagination (list) {
 
 
+}
 
 // Call functions
