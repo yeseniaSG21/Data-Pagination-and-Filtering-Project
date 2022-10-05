@@ -47,8 +47,10 @@ function addPagination (list) {
         <button type="button">${[i]}</button>
        </li>`;
     linkList.insertAdjacentHTML('beforeend', button);
+    const firstBtn = document.querySelector('button');
+    firstBtn.className = 'active';
   }
-    document.querySelector('.active');
+
     // loop over the number of pages needed
       // create the elements needed to display the pagination button
       // insert the above elements
