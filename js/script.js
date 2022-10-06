@@ -14,6 +14,7 @@ function showPage (list, page) {
   const studentList = document.querySelector('.student-list');
   studentList.innerHTML = '';
 
+  //This for loop will length over the student array
   for ( let i = 0; i < list.length; i++ ){
     if ( i >= startIndex && i < endIndex ) {
       let studentItem =
@@ -48,10 +49,11 @@ function addPagination (list) {
        </li>`;
     linkList.insertAdjacentHTML('beforeend', button);
   }
-
+  //The first pagination button with a class of "active"
   const firstBtn = document.querySelector('button')
   firstBtn.className = 'active';
 
+  //This Event Handler will test if the button is click to transiton through the student data, 9 at a time
   linkList.addEventListener('click', (e) => {
       if (e.target.tagName === "BUTTON") {
         let active = document.querySelector('.active');
