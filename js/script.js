@@ -38,7 +38,7 @@ function showPage (list, page) {
 **/
 function addPagination (list) {
   const numOfPages = Math.ceil(list.length/9);
-  const linkList = document.querySelector('.link-list');
+  let linkList = document.querySelector('.link-list');
   linkList.innerHTML = '';
 
   for ( let i = 1; i <= numOfPages; i++) {
@@ -48,19 +48,17 @@ function addPagination (list) {
        </li>`;
     linkList.insertAdjacentHTML('beforeend', button);
   }
-  document.querySelector('button').className = 'active';
 
-  linkList.addEventListener('click', (event) => {
-    for ( let i = 0; i < buttons.length; i++ ) {
-      buttons[i].classList.remove('active');
-    }
-    let selected = e.target;
-      if(event.target.tagName === "BUTTON") {
-      let active = document.querySelector('.active');
-      active.className = "";
-      selected.className = 'active';
-      showPage(list, selected.textContent);
-    }
+  const firstBtn = document.querySelector('button')
+  firstBtn.className = 'active';
+
+  linkList.addEventListener('click', (e) => {
+      if (e.target.tagName === "BUTTON") {
+        let active = document.querySelector('.active');
+        active.className = '';
+        e.target.className = 'active';
+        showPage(list, e.target.textContent);
+      }
   });
 }
 
